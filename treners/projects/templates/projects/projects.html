@@ -22,7 +22,7 @@
             </div>
         </div>
     </section>
-    <!-- Search Result: DevList -->
+    <!-- Search Result -->
     <section class="projectsList">
         <div class="container">
             <div class="grid grid--three">
@@ -67,7 +67,7 @@
         <ul class="container">
 
             {% if projects.has_previous %}
-            <li><a href="?page={{ projects.previous_page_number }}" class="btn page-link">&lt; Prev</a></li>
+            <li><a href="?page={{ projects.previous_page_number }}" class="btn page-link">&#10094;</a></li>
             {% endif %}
 
             {% for page in custom_range %}
@@ -79,7 +79,7 @@
             {% endfor %}
 
             {% if projects.has_next %}
-            <li><a href="?page={{ projects.next_page_number }}" class="btn page-link">Next &gt;</a></li>
+            <li><a href="?page={{ projects.next_page_number }}" class="btn page-link">&#10095;</a></li>
             {% endif %}
 
         </ul>

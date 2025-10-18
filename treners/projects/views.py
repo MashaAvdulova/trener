@@ -57,8 +57,6 @@ def project(request, pk):
         review.project = project_obj
         review.save()
 
-        project_obj.get_vote_count()
-
         messages.success(request, 'Ваш комментарий добавлен успешно')
         return redirect('project', pk=project_obj.id)
 
