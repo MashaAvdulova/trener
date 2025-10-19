@@ -14,7 +14,7 @@
         </div>
 
         <form action="{% url 'register' %}" method="post" class="form auth__form">
-          <!-- Input:Text -->
+          <!-- Форма -->
             {% csrf_token %}
             {% for field in form %}
           <div class="form__field">
@@ -57,7 +57,7 @@
 
         <form action="{% url 'login' %}" method="post" class="form auth__form">
             {% csrf_token %}
-            <!-- Input:Email -->
+            <!-- Имя пользователя -->
             <div class="form__field">
                 <label for="formInput#text">Имя пользователя: </label>
                 <input
@@ -69,7 +69,7 @@
                 />
             </div>
 
-            <!-- Input:Password -->
+            <!-- Пароль -->
             <div class="form__field">
                 <label for="formInput#password">Пароль: </label>
                 <input

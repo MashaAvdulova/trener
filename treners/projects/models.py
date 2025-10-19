@@ -14,8 +14,6 @@ class Project(models.Model):
     def __str__(self):
         return self.title
 
-    # class Meta:
-    #     ordering = ['-vote_ratio', '-vote_total', 'title']
 
     def reviewers(self):
         queryset = self.review_set.all().values_list('owner__id', flat=True)
@@ -36,8 +34,6 @@ class Review(models.Model):
     body = models.TextField(null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True)
 
-    # def __str__(self):
-    #     return self.value
 
     class Meta:
         unique_together = [['owner', 'project']]
